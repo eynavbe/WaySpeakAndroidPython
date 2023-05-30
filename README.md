@@ -7,7 +7,6 @@
 Description of the architecture and system design of the application
 . The application is intended for speech therapists and their patients.
 
-<a name="purpose"/>
 ### Purpose
 The purpose of the project is to create an application for practicing MOTOR ORAL
 the steering), with the aim of helping to rehabilitate people who have undergone a neurological injury. The rehabilitation is carried out by
