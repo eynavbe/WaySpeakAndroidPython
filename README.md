@@ -3,7 +3,6 @@
  - [Introduction](#introduction)  
    - [Purpose](#purpose)  
    
-<a name="introduction"/>
 ## Introduction
 Description of the architecture and system design of the application
 . The application is intended for speech therapists and their patients.
