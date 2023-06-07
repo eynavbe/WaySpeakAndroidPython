@@ -55,6 +55,13 @@ https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64
 
 ### Facial Expression Analysis
 
+#### Result
+##### Smile
+Precision: 0.74
+Recall: 0.94
+Accuracy: 0.80
+F1-score: 0.83
+
 ### Server
 
 
