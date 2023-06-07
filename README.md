@@ -2,13 +2,14 @@
 ## Table of Contents  
  - [Introduction](#introduction)  
    - [Purpose](#purpose)  
-   
-## Introduction
-Description of the architecture and system design of the application
+ 
+### Purpose
+An application that will help people suffering from neurological problems in the rehabilitation stages, by analyzing their face.
 . The application is intended for speech therapists and their patients.
 
-### Purpose
-The purpose of the project is to create an application for practicing MOTOR ORAL
+## Introduction
+People who suffer from various neurological impairments have difficulty speaking and expressing facial expressions, so there is a need for an application that will help them practice the difficulty outside of meetings with the communication therapist accompanying the process.
+An application for practicing ORAL MOTOR.
 the steering), with the aim of helping to rehabilitate people who have undergone a neurological injury. The rehabilitation is carried out by
 Practicing the facial expressions, people whose ability to speak was damaged by the injury
 Neurologically they will be able to restore their steering for speaking.
@@ -37,8 +38,7 @@ From the Department of Communication Disorders and the Levinstein Hospital to de
 
 
 ## Development
-
-
+In order to help with the training of the facial expressions, it was necessary to analyze the facial expressions using different methods. Some of the expressions were analyzed using machine learning methods, some with calculation inventions according to landmarks and some using different software such as Matlab. Linking the various algorithms to the application was performed by an external server.
 
 ### Application
 #### Clinician Side:
