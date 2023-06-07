@@ -35,3 +35,25 @@ The meeting with a clinician independently and the possibility of the clinician 
 The remote progress. Such an application is currently missing and that is why we received an application
 From the Department of Communication Disorders and the Levinstein Hospital to develop such an application.
 
+
+## Development
+
+
+
+### Application
+#### Clinician Side:
+
+
+https://github.com/eynavbe/WaySpeak/assets/93534494/e634280a-8f02-452a-9573-20ef8ffcfb60
+
+
+#### Patient Side:
+https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64ab0b3014
+
+### Facial Expression Analysis
+
+### Server
+
+
+
+
