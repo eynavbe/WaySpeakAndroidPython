@@ -44,7 +44,10 @@ From the Department of Communication Disorders and the Levinstein Hospital to de
 #### Clinician Side:
 
 
-https://github.com/eynavbe/WaySpeak/assets/93534494/e634280a-8f02-452a-9573-20ef8ffcfb60
+
+https://github.com/eynavbe/WaySpeak/assets/93534494/66c34ecd-d60f-472d-962f-19c4ae79a748
+
+
 
 
 #### Patient Side:
