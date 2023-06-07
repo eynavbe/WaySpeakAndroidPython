@@ -71,6 +71,7 @@ The facial expressions analyzed:
 8) Lift the tongue towards the nose
 9) Lower the tongue towards the chin
 #### Result
+Facial expression analysis was tested on 8 people, 3 men and 5 women.
 ##### Smile
 Precision: 0.74 </br>
 Recall: 0.94 </br>
