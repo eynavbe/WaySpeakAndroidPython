@@ -38,8 +38,8 @@ From the Department of Communication Disorders and the Levinstein Hospital to de
 
 
 ## Development
-In order to help with the training of the facial expressions, it was necessary to analyze the facial expressions using different methods. Some of the expressions were analyzed using machine learning methods, some with calculation inventions according to landmarks and some using different software such as Matlab. Linking the various algorithms to the application was performed by an external server.
-
+In order to help with the training of the facial expressions, it was necessary to analyze the facial expressions using different methods. Some of the expressions were analyzed using machine learning methods, some with calculation inventions according to landmarks and some using different software such as Matlab. Linking the various algorithms to the application was performed by an external server.</br>
+The application will upload a video to the data and link through the server to a Python code that will analyze the video and update the data if the patient performed successfully, if the patient made progress. And a picture of one frame from the video where the patient made the best expression will come up. The application will pull the updated information from the data and present it to the communication clinician.
 ### Application
 #### Clinician Side:
 
