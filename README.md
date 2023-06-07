@@ -57,6 +57,8 @@ https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64
 The patient will take a video of him performing the expression requested of him via the app. The video will be sent for analysis which will determine:
 - If the patient performed the expression successfully
 - If the patient has made progress from his best performance.</br>
+
+
 The image of the best expressive performance in the video will be saved and shown to the speech therapist in the application or for the purpose of comparing progress.</br></br>
 The facial expressions analyzed:
 1) Mouth open
