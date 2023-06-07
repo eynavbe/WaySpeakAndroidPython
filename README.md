@@ -72,12 +72,25 @@ The facial expressions analyzed:
 9) Lower the tongue towards the chin
 #### Result
 Facial expression analysis was tested on 8 people, 3 men and 5 women.
-##### Smile
+##### 1) Mouth open
+Precision: 0.87 </br>
+Recall: 1.0 </br>
+Accuracy: 0.93 </br>
+F1-score: 0.93 </br>
+
+##### 2) Mouth closed
+
+##### 3) Smile
 Precision: 0.74 </br>
 Recall: 0.94 </br>
 Accuracy: 0.80 </br>
 F1-score: 0.83 </br>
-
+##### 4) Puckering of lips
+##### 5) Stick out the tongue in a straight line
+##### 6) Move the tongue to the right
+##### 7) Move the tongue to the left
+##### 8) Lift the tongue towards the nose
+##### 9) Lower the tongue towards the chin
 ### Server
 
 
