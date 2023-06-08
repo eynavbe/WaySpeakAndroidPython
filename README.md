@@ -10,6 +10,7 @@
       - [The classification of each facial expression](#the-classification-of-each-facial-expression)
       - [Result](#result) 
    - [Server](#server) 
+ - [Summary](#summary) 
 
 ## Purpose
 An application that will help people suffering from neurological problems in the rehabilitation stages, by analyzing their face.
@@ -148,8 +149,8 @@ F1-score: 0.83 </br>
 ##### 8) Lift the tongue towards the nose
 ##### 9) Lower the tongue towards the chin
 ### Server
-Removing the link between the Android application written in Java and facial expression analysis written in Python.
-
+Connect between the Android application written in Java and facial expression analysis written in Python.
+To connect an Android application to python, create a Flask server deployed on Glitch,  use HTTP requests to communicate between the two. The Android application make HTTP requests to specific endpoints on the Flask server, and the server will have the Python code for the video and will update the database. The app will connect to a database and pull the data from there.
 
 
 
