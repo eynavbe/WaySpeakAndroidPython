@@ -2,7 +2,7 @@
 ## Table of Contents  
  - [Purpose](#purpose)  
  - [Introduction](#introduction)  
- - [System Architecture](#system_architecture)  
+ - [System Architecture](#system-architecture)  
  - [Development](#development) 
    - [Application](#application) 
       - [Clinician Side](#clinician-side) 
