@@ -116,7 +116,7 @@ The aligned image is sent to the learning machine trained to recognize an open m
 If the height of the space between the upper and lower lips is greater than the ratio between the height of the lower lips and the height of the upper lips, then the mouth is open.
 ###### 2) Mouth closed
 ###### 3) Smile
-
+The aligned image is sent to the learning machine trained to recognize an smile, if after machine learning it is accepted that no smile then the image will be sent to calculations, Landmarks of the mouth were obtained from the image, which with the help of the points is calculated:
 
 #### Result
 Facial expression analysis was tested on 8 people, 3 men and 5 women.
