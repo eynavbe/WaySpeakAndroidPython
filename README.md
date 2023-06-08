@@ -75,6 +75,37 @@ The facial expressions analyzed:
 
 https://github.com/eynavbe/WaySpeak/assets/93534494/4cb2c13a-4693-40dc-99ad-0fa957f12670
 
+#### The classification of each facial expression
+##### Landmarks of the face
+Landmarks of the face refer to specific points on a person's face that are used to identify and analyze facial features. </br>
+
+ Landmarks of the face  of 64 predefined points on a face. These points are positioned at key locations such as the corners of the eyes, nose, mouth, and other significant facial structures. </br>
+
+Facial landmark detection algorithms typically rely on machine learning techniques, including deep learning and computer vision methods. These algorithms are trained on large datasets of labeled facial images, where the landmarks' positions are manually annotated. The trained models can then predict the facial landmarks' coordinates in real-time on new images or video frames.</br>
+
+The libraries to facial landmark detection dlib, OpenCV, and facial recognition libraries built on deep learning architectures like Convolutional Neural Networks (CNNs). 
+</br>
+
+##### Alignment, centering and approximation of the face
+The face is rotated so that the eyes are along the same y coordinates.</br>
+The face size will be roughly the same.</br>
+The algorithm is based on Chapter 8 of Mastering OpenCV with Practical Computer Vision Projects.</br>
+After receiving the points of the eyes, left eye and right eye. Calculate the center of each eye by averaging all the points in each eye. and calculating the differences between the center points of each eye get the angle between the centers of the eye.
+With the help of the angle it will be possible to rotate the image.
+to determine the angle of rotation needed to align the eyes on the same y-axis. This can be done by calculating the angle between the line connecting the center points of the eyes and the horizontal axis.
+Obtaining a transformation matrix that describes the rotation operations by using the angle of rotation, translation and scaling applied to an image. Using the rotation matrix to flip the image.
+
+##### learning machine for detecting mouth opening and smiling
+
+###### 1) Mouth open
+The aligned image is sent to the learning machine trained to recognize an open mouth, if after machine learning it is accepted that the mouth is closed then the image will be sent to calculations, Landmarks of the mouth were obtained from the image, which with the help of the points is calculated:
+  - the height of the lower lips - by calculating the average distance of the points of the upper lips
+- The height of the upper lips - by calculating the average distance of the points of the upper lips
+- The height of the distance between the upper and lower lips - by calculating the average of the distances of the lower points of the upper lip between the upper points of the lower lip.
+- The ratio - the minimum size of the height of the lower lips or the height of the upper lips.
+If the height of the space between the upper and lower lips is greater than the ratio between the height of the lower lips and the height of the upper lips, then the mouth is open.
+###### 2) Mouth closed
+###### 3) Smile
 
 
 #### Result
