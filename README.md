@@ -109,6 +109,9 @@ Obtaining a transformation matrix that describes the rotation operations by usin
 The Deep Learning model is trainind on the around 29,000 imges of persons with different facial expressions.
 dataset of kaggle - FER-2013: 
 result: accuracy: 0.9509.
+##### Matlabfor Identification Move Tongue
+
+
 
 ###### 1) Mouth open
 The aligned image is sent to the learning machine trained to recognize an open mouth, if after machine learning it is accepted that the mouth is closed then the image will be sent to calculations, Landmarks of the mouth were obtained from the image, which with the help of the points is calculated:
@@ -120,7 +123,7 @@ If the height of the space between the upper and lower lips is greater than the 
 ###### 2) Mouth closed
 ###### 3) Smile
 The aligned image is sent to the learning machine trained to recognize an smile, if after machine learning it is accepted that no smile then the image will be sent to calculations, Landmarks of the mouth were obtained from the image, which with the help of the points is calculated:
-
+###### 5) Stick out the tongue in a straight line
 #### Result
 Facial expression analysis was tested on 8 people, 3 men and 5 women.
 ##### 1) Mouth open
