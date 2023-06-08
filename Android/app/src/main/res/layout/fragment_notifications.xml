@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:background="@color/grey"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+        <LinearLayout
+            android:background="@drawable/gradientbackground"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+<!--            <ImageView-->
+<!--                android:layout_marginTop="45dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:src="@drawable/photocercle"/>-->
+            <TextView
+                android:id="@+id/tvPatientIdentificationNumber"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PatientIdentificationNumber"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:textSize="30sp"/>
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <ImageView-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:src="@drawable/ic_email_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvPatientIdentificationNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="IdentificationNumber"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <ImageView-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:src="@drawable/ic_phone_android_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvDateBirth"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="dateBirth"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <ImageView-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:src="@drawable/ic_group_add_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvGender"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="gender"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <ImageView-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:src="@drawable/ic_forum_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvHourMeeting"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="hourMeeting"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--            <ImageView-->
+            <!--                android:layout_width="36dp"-->
+            <!--                android:layout_height="36dp"-->
+            <!--                android:src="@drawable/ic_forum_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvDateMeeting"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="dateMeeting"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--            <ImageView-->
+            <!--                android:layout_width="36dp"-->
+            <!--                android:layout_height="36dp"-->
+            <!--                android:src="@drawable/ic_forum_black_24dp"/>-->
+            <TextView
+                android:id="@+id/tvPrescribingClinician"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="prescribingClinician"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibBest1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo_way_speak"/>
+
+                    <TextView
+                        android:id="@+id/tvBest1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="פתיחת פה" >
+                    </TextView>
+                </FrameLayout>
+         </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ibBest2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/tvBest2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="סגירת פה" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="חיוך" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="כיווץ שפתיים" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="הוצאת לשון" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="הזזה לשון ימינה" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="הזזה לשון שמאלה" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="הרמת לשון" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:id="@+id/flBest9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:id="@+id/ibBest9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="fitXY"
+                        android:src="@color/orange" >
+                    </ImageButton>
+
+                    <TextView
+                        android:id="@+id/tvBest9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:clickable="false"
+                        android:text="הורדת לשון" >
+                    </TextView>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+<!--    <Button-->
+<!--        android:textColor="#fff"-->
+<!--        android:background="@drawable/buttonstyle"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Follow Me"/>-->
+
+</LinearLayout>

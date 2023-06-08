@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".ui.home.ui.main.PatientProgress">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/llll"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="כמות הפעמיים שהמטופל הצליח לבצע כל תרגיל מסך התוכנית" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator1"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage1"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator1" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator1"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator2"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage2"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator2" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10%"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator2"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator3"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage3"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator3" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator3"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator4"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage4"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator4" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator4"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator5"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage5"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator5" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator5"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator6"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage6"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator6" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator6"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator7"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage7"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator7" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator7"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator7"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator8"
+                    android:visibility="gone"
+
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage8"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator8" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator8"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clProgressIndicator9"
+                    android:visibility="gone"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/circularProgressIndicator9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progress="40"
+                        app:indicatorColor="@color/orange"
+                        app:trackColor="@color/grey"
+                        app:indicatorSize="80dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:trackCornerRadius="8dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicator9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="count"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/tvProgressIndicatorPercentage9"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularProgressIndicator9" />
+
+                    <TextView
+                        android:id="@+id/tvProgressIndicatorPercentage9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="444"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/circularProgressIndicator9"
+                        app:layout_constraintEnd_toEndOf="@+id/circularProgressIndicator9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvProgressIndicator9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/llPatientGraph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="כמות הפעמיים שהמטופל ביצע כל תרגיל מסך התוכנית" />
+                <com.eynav.wayspeack.ui.home.ui.main.BarChartView
+                    android:id="@+id/graphView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="50dp"
+                    android:paddingRight="20dp" />
+
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView6"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView7"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView8"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+<!--                    <com.eynav.wayspeack.ui.home.ui.main.BarChartView-->
+<!--                        android:id="@+id/graphView9"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="200dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:layout_marginTop="32dp"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:paddingTop="25dp"-->
+<!--                        android:paddingRight="20dp" />-->
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/orange"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvTitleAddUpdatePatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_margin="8dp"
+        android:text="Add Patient" />
+
+
+
+    <EditText
+        android:id="@+id/etDateBirthPatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="בחר תאריך לידה..."
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+
+        />
+
+    <Spinner
+        android:id="@+id/spGenderPatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/etHourMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="בחר שעת פגישה..."
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+
+        />
+
+    <EditText
+        android:id="@+id/etDateMeeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="בחר תאריך פגישה..."
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+
+        />
+
+
+
+
+
+    <Button
+        android:id="@+id/btnAddUpdatePatient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_gravity="end|center"
+        android:text="Add"
+        />
+</LinearLayout>

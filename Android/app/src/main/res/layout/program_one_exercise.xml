@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="הוספת תוכנית תרגילים"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/etDateStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/grey"
+        android:gravity="center"
+
+        android:text=" תאריך התחלה..."
+        android:padding="8dp"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/etDateEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/grey"
+        android:gravity="center"
+
+        android:text=" תאריך סיום..."
+        android:padding="8dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+
+        android:text="  סוג תרגילים   |  כמות ביצוע התרגיל   | מספור בסדר פעולות  " />
+
+    <ScrollView android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/scrollView"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llOpen"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="פתיחת פה: "/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llClose"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="סגירת פה: "/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llSmile"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexSmile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountSmile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="חיוך: "/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llPursing"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexPursing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountPursing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="כיווץ שפתיים: "/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llTongueOut"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexTongueOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountTongueOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+
+                <TextView
+
+
+
+                    android:text="הוצאה לשון ישר"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llMoveTongueRight"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexMoveTongueRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountMoveTongueRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="תזוזה לשון חמינה: "/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llMoveTongueLeft"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexMoveTongueLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountMoveTongueLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="תזוזה לשון שמאלה: "/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llLiftTongueNose"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexLiftTongueNose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountLiftTongueNose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:textSize="14sp"
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="הרמה לשון לאף: "/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/llLowerTongueChin"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stIndexLowerTongueChin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_weight="1"
+                    android:text="מספור בסדר פעולות" />
+                <TextView
+                    android:id="@+id/etCountLowerTongueChin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+
+                    android:layout_marginLeft="8dp"
+                    android:text="כמות ביצוע התרגיל" />
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+
+                    android:text="הורדה לשון לסנטר: "/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
