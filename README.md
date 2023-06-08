@@ -1,9 +1,19 @@
 # WaySpeak
 ## Table of Contents  
+ - [Purpose](#purpose)  
  - [Introduction](#introduction)  
-   - [Purpose](#purpose)  
- 
-### Purpose
+   - [Goals of clinician side](#goals-of-clinician-side)
+   - [Goals of patient side](#goals-of-patient-side)
+ - [Development](#development) 
+   - [Application](#application) 
+      - [Clinician Side](#clinician-side) 
+      - [Patient Side](#patient-side) 
+   - [Facial Expression Analysis](#facial-expression-analysis) 
+      - [The classification of each facial expression](#the-classification-of-each-facial-expression)
+      - [Result](#result) 
+   - [Server](#server) 
+
+## Purpose
 An application that will help people suffering from neurological problems in the rehabilitation stages, by analyzing their face.
 . The application is intended for speech therapists and their patients.
 
@@ -13,14 +23,14 @@ An application for practicing ORAL MOTOR.
 the steering), with the aim of helping to rehabilitate people who have undergone a neurological injury. The rehabilitation is carried out by
 Practicing the facial expressions, people whose ability to speak was damaged by the injury
 Neurologically they will be able to restore their steering for speaking.
-###### The goals of the app from the clinician's side:
+###### Goals of clinician side
 1) Possibility to assign exercises to patients related to facial expressions in the mouth
 which enable clear and intelligible speech.
 2) Monitoring and analyzing the patient's progress in performing exercises with data that will be displayed
 to the clinician according to the results of the patient's practice.
 3) Entering progress and feedback to the patient.
 
-###### The goals of the application from the patient's side:
+###### Goals of patient side
 1) Possibility to practice the exercises assigned to him at home outside of visiting hours
 the clinician
 2) Receiving feedback for performing the exercise. Receiving the feedback will be done after each exercise but
@@ -41,7 +51,7 @@ From the Department of Communication Disorders and the Levinstein Hospital to de
 In order to help with the training of the facial expressions, it was necessary to analyze the facial expressions using different methods. Some of the expressions were analyzed using machine learning methods, some with calculation inventions according to landmarks and some using different software such as Matlab. Linking the various algorithms to the application was performed by an external server.</br>
 The application will upload a video to the data and link through the server to a Python code that will analyze the video and update the data if the patient performed successfully, if the patient made progress. And a picture of one frame from the video where the patient made the best expression will come up. The application will pull the updated information from the data and present it to the communication clinician.
 ### Application
-#### Clinician Side:
+#### Clinician Side
 
 
 
@@ -50,7 +60,7 @@ https://github.com/eynavbe/WaySpeak/assets/93534494/66c34ecd-d60f-472d-962f-19c4
 
 
 
-#### Patient Side:
+#### Patient Side
 https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64ab0b3014
 
 ### Facial Expression Analysis
@@ -130,6 +140,7 @@ F1-score: 0.83 </br>
 ##### 8) Lift the tongue towards the nose
 ##### 9) Lower the tongue towards the chin
 ### Server
+Removing the link between the Android application written in Java and facial expression analysis written in Python.
 
 
 
