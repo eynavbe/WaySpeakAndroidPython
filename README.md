@@ -45,6 +45,9 @@ The meeting with a clinician independently and the possibility of the clinician 
 The remote progress. Such an application is currently missing and that is why we received an application
 From the Department of Communication Disorders and the Levinstein Hospital to develop such an application.
 
+## System Architecture
+<img width="1291" alt="system_architecture" src="https://github.com/eynavbe/WaySpeak/assets/93534494/9976aa13-b017-4c31-9be4-4e4b35f6d9eb">
+
 
 ## Development
 In order to help with the training of the facial expressions, it was necessary to analyze the facial expressions using different methods. Some of the expressions were analyzed using machine learning methods, some with calculation inventions according to landmarks and some using different software such as Matlab. Linking the various algorithms to the application was performed by an external server.</br>
