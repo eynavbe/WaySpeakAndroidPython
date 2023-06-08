@@ -106,6 +106,9 @@ to determine the angle of rotation needed to align the eyes on the same y-axis. 
 Obtaining a transformation matrix that describes the rotation operations by using the angle of rotation, translation and scaling applied to an image. Using the rotation matrix to flip the image.
 
 ##### learning machine for detecting mouth opening and smiling
+The Deep Learning model is trainind on the around 29,000 imges of persons with different facial expressions.
+dataset of kaggle - FER-2013: 
+result: accuracy: 0.9509.
 
 ###### 1) Mouth open
 The aligned image is sent to the learning machine trained to recognize an open mouth, if after machine learning it is accepted that the mouth is closed then the image will be sent to calculations, Landmarks of the mouth were obtained from the image, which with the help of the points is calculated:
