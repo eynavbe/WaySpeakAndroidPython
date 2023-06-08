@@ -2,8 +2,6 @@
 ## Table of Contents  
  - [Purpose](#purpose)  
  - [Introduction](#introduction)  
-   - [Goals of clinician side](#goals-of-clinician-side)
-   - [Goals of patient side](#goals-of-patient-side)
  - [Development](#development) 
    - [Application](#application) 
       - [Clinician Side](#clinician-side) 
