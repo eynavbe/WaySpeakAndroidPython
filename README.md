@@ -70,6 +70,15 @@ The facial expressions analyzed:
 7) Move the tongue to the left
 8) Lift the tongue towards the nose
 9) Lower the tongue towards the chin
+</br>
+
+https://github.com/eynavbe/WaySpeak/assets/93534494/64d447b4-c1b8-407d-af36-b2b11648dd4c
+
+<video controls width="400">
+  <source src="https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64ab0b3014" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 #### Result
 Facial expression analysis was tested on 8 people, 3 men and 5 women.
 ##### 1) Mouth open
