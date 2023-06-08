@@ -92,8 +92,7 @@ Landmarks of the face refer to specific points on a person's face that are used 
 
 Facial landmark detection algorithms typically rely on machine learning techniques, including deep learning and computer vision methods. These algorithms are trained on large datasets of labeled facial images, where the landmarks' positions are manually annotated. The trained models can then predict the facial landmarks' coordinates in real-time on new images or video frames.</br>
 
-The libraries to facial landmark detection dlib, OpenCV, and facial recognition libraries built on deep learning architectures like Convolutional Neural Networks (CNNs). 
-</br>
+The libraries to facial landmark detection as dlib, OpenCV. and The file pre-trained model to facial landmark "shape_predictor_68_face_landmarks.dat".</br>
 
 ##### Alignment, centering and approximation of the face
 The face is rotated so that the eyes are along the same y coordinates.</br>
@@ -116,6 +115,8 @@ The aligned image is sent to the learning machine trained to recognize an open m
 - The height of the upper lips - by calculating the average distance of the points of the upper lips
 - The height of the distance between the upper and lower lips - by calculating the average of the distances of the lower points of the upper lip between the upper points of the lower lip.
 - The ratio - the minimum size of the height of the lower lips or the height of the upper lips.
+
+
 If the height of the space between the upper and lower lips is greater than the ratio between the height of the lower lips and the height of the upper lips, then the mouth is open.
 ###### 2) Mouth closed
 If after the algorithm that is found for testing the opening of the mouth, False comes out, then the mouth is closed.
