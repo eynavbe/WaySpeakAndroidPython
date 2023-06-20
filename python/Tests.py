@@ -15,7 +15,7 @@ class Tests(unittest.TestCase):
             ret_mouth_open, mouth_height = analysis_frame.open_and_close.calculating_mouth_open(shape, faceAligned)
             self.assertTrue(ret_mouth_open)
 
-        frame1 = cv2.imread('close_mouth.png')
+        frame1 = cv2.imread('no_open_mouth.png')
         shape, frame, faceAligned = analysis_frame.analysis_one_frame(frame1)
         ret_straight_face = analysis_frame.facial_expressions.straight_face(shape)
         if ret_straight_face:
@@ -31,7 +31,7 @@ class Tests(unittest.TestCase):
             ret_mouth_close, mouth_height = analysis_frame.open_and_close.calculating_mouth_close(shape, faceAligned)
             self.assertTrue(ret_mouth_close)
 
-        frame1 = cv2.imread('open_mouth.png')
+        frame1 = cv2.imread('no_close_mouth.png')
         shape, frame, faceAligned = analysis_frame.analysis_one_frame(frame1)
         ret_straight_face = analysis_frame.facial_expressions.straight_face(shape)
         if ret_straight_face:
