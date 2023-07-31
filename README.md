@@ -6,10 +6,11 @@
  - [Development](#development) 
    - [Application](#application) 
       - [Clinician Side](#clinician-side) 
-      - [Patient Side](#patient-side) 
+      - [Patient Side](#patient-side)
    - [Facial Expression Analysis](#facial-expression-analysis) 
       - [The classification of each facial expression](#the-classification-of-each-facial-expression)
-      - [Result](#result) 
+      - [Result](#result)
+   - [Database](#database)
    - [Server](#server) 
  - [Summary](#summary) 
 
@@ -65,6 +66,8 @@ https://github.com/eynavbe/WaySpeak/assets/93534494/66c34ecd-d60f-472d-962f-19c4
 
 #### Patient Side
 https://github.com/eynavbe/WaySpeak/assets/93534494/6fdc7a41-b93a-4843-aa68-4f64ab0b3014
+
+
 
 ### Facial Expression Analysis
 The patient will take a video of him performing the expression requested of him via the app. The video will be sent for analysis which will determine:
@@ -153,6 +156,12 @@ F1-score: 0.83 </br>
 ##### 7) Move the tongue to the left
 ##### 8) Lift the tongue towards the nose
 ##### 9) Lower the tongue towards the chin
+
+### Database
+- Android studio is linked to firebase.
+- The Python code is linked to Firebase.
+- registers and reads the information there.
+  
 ### Server
 Connect between the Android application written in Java and facial expression analysis written in Python.
 To connect an Android application to python, create a Flask server deployed on Glitch,  use HTTP requests to communicate between the two. The Android application make HTTP requests to specific endpoints on the Flask server, and the server will have the Python code for the video and will update the database. The app will connect to a database and pull the data from there.
