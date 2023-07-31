@@ -27,6 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -207,39 +208,22 @@ public class HomePatient extends AppCompatActivity {
                                 String dateEnd = String.valueOf(document.getData().get("dateEnd"));
                                 String[] dateStartSplit = dateStart.split("/", 5);
                                 String[] dateEndSplit = dateEnd.split("/", 5);
-//                                Date dateBefore = new Date(Integer.parseInt(dateStartSplit[2]), Integer.parseInt(dateStartSplit[1]) - 1, Integer.parseInt(dateStartSplit[0]));
                                 LocalDate dateBefore = LocalDate.of(Integer.parseInt(dateStartSplit[2]), Integer.parseInt(dateStartSplit[1]), Integer.parseInt(dateStartSplit[0]));
-
-//                                Date dateAfter = new Date(Integer.parseInt(dateEndSplit[2])+1, Integer.parseInt(dateEndSplit[1]) - 1, Integer.parseInt(dateEndSplit[0]));
                                 LocalDate dateAfter = LocalDate.of(Integer.parseInt(dateEndSplit[2]), Integer.parseInt(dateEndSplit[1]), Integer.parseInt(dateEndSplit[0]));
-
-//                                String dateToday = new SimpleDateFormat("dd/MM/yy").format(Calendar.getInstance().getTime());
-//                                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yy");
                                 LocalDate currentDate = LocalDate.now();
                                 System.out.println("dateBefore "+dateBefore);
                                 System.out.println("dateAfter "+dateAfter);
                                 System.out.println("currentDate "+currentDate);
-
-//                                String[] dateTodaySplit = dateToday.split("/", 5);
                                 if (currentDate.isAfter(dateBefore) && dateAfter.isAfter(currentDate)) {
                                     List<TypeExercise> typeExercises = new ArrayList<>();
                                     exercise = new Exercise(dateStart,dateEnd,dateAdd, typeExercises);
-                                    System.out.println("triiiiiii");
-//                                    String[] dateStartSplit = exercise.getDateStart().split("/", 5);
-//                                    String[] dateEndSplit = exercise.getDateEnd().split("/", 5);
-//                                    Date dateBefore = new Date(Integer.parseInt(dateStartSplit[2]), Integer.parseInt(dateStartSplit[1]), Integer.parseInt(dateStartSplit[0]));
-//                                    Date dateAfter = new Date(Integer.parseInt(dateEndSplit[2]), Integer.parseInt(dateEndSplit[1]), Integer.parseInt(dateEndSplit[0]));
+                                    LocalDate currentDate1 = LocalDate.now();
+                                    DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                                    String dateNow1 = currentDate1.format(formatter1);
+                                    String[] dateNow1Split = dateNow1.split("/", 5);
+                                    LocalDate dateBefore2 = LocalDate.of(Integer.parseInt(dateNow1Split[2]), Integer.parseInt(dateNow1Split[1]), Integer.parseInt(dateNow1Split[0]));
 
-//                                    long dateBeforeInMs = dateBefore.getTime();
-//                                    long dateAfterInMs = dateAfter.getTime();
-//
-//                                    long timeDiff = Math.abs(dateAfterInMs - dateBeforeInMs);
-//
-//                                    long daysDiff = TimeUnit.DAYS.convert(timeDiff, TimeUnit.MILLISECONDS);
-//                                    daysDiff = daysDiff +1;
-                                    long daysBetween = ChronoUnit.DAYS.between(dateBefore, dateAfter);
-
-//                                    System.out.println(" The number of days between dates: " + daysDiff);
+                                    long daysBetween = ChronoUnit.DAYS.between(dateBefore2, dateAfter);
                                     String text = "נשאר "+daysBetween+" ימים לתרגול";
 //
                                     tvDayForProgram.setText(text);
