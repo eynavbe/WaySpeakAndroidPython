@@ -76,9 +76,9 @@ class SmileAndPursing:
         y49 = mouth[0][1]
         x55 = mouth[6][0]
         y55 = mouth[6][1]
-        dist_smilo = 0
+        # dist_smilo = 0
         dist_smile = ((x49 - x55) ** 2 + (y49 - y55) ** 2) ** 0.5
-        diff_smile = (dist_smile) - dist_smilo
+        diff_smile = (dist_smile)
         if diff_smile < 0:
             diff_smile *= -1
         if self.machine_learning_smile(faceAligned):
