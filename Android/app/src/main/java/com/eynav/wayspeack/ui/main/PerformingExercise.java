@@ -281,7 +281,7 @@ public class PerformingExercise extends Fragment {
 //
     }
 
-    private void addExercisesTypeToFirebase(TypeExercise typeExercise, String data) {
+    private void addExercisesTypeToFirebase(TypeExercise typeExercise, String videoDownloadUrl) {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
             Map<String, Object> Exercise = new HashMap<>();
@@ -291,6 +291,9 @@ public class PerformingExercise extends Fragment {
             Exercise.put("Image", "");
             Exercise.put("success", false);
             Exercise.put("progress", false);
+            Exercise.put("video", videoDownloadUrl);
+
+
 //            Experience
 //                    date
 //            Image
