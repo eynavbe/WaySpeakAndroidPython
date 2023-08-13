@@ -19,28 +19,28 @@ class AnalysisRealTime:
         cv2.destroyAllWindows()
         self.vs.stop()
 
-    def analysis_tongue(self):
+     def analysis_tongue(self):
 
         self.tongue = Tongue('video_analysis.mp4', self.type_result)
 
         if self.type_result == 'Move_tongue_to_left':
-            if 'left' in self.tongue.output:
+            if 'left' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
 
         if self.type_result == 'move_tongue_to_right':
-            if 'right' in self.tongue.output:
+            if 'right' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
 
         if self.type_result == 'straight_tongue_out':
-            if 'straight' in self.tongue.output:
+            if 'straight' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
 
         if self.type_result == 'lift_tongue_to_nose':
-            if 'nose' in self.tongue.output:
+            if 'nose' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
 
         if self.type_result == 'down_tongue_to_chin':
-            if 'chin' in self.tongue.output:
+            if 'chin' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
 
     def analysis_every_frame_no_tongue(self):
