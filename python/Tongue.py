@@ -154,22 +154,33 @@ class Tongue:
         eng = matlab.engine.start_matlab()
 
         # Call the MATLAB function and capture the output
-        if self.type_result == 'Move_tongue_to_left':
-            self.output = eng.tracking_tongue(1)
-        else: 
+                if self.type_result == 'Move_tongue_to_left':
+            output = eng.tracking_tongue(1)
+            if output[0] > output[1]:
+                self.output_tongue = 'Move_tongue_to_left'
+        else:
             if self.type_result == 'move_tongue_to_right':
-                self.output = eng.tracking_tongue(2)
-            else: 
+                output = eng.tracking_tongue(2)
+                if output[1] > output[0]:
+                    self.output_tongue = 'move_tongue_to_right'
+            else:
                 if self.type_result == 'straight_tongue_out':
-                    self.output = eng.tracking_tongue(3)
-                else: 
+                    output = eng.tracking_tongue(3)
+                    if output[2] > 0:
+                        self.output_tongue = 'straight_tongue_out'
+                else:
                     if self.type_result == 'lift_tongue_to_nose':
-                        self.output = eng.tracking_tongue(4)
-                    else: 
+                        output = eng.tracking_tongue(4)
+                        if output[3] > 0:
+                            self.output_tongue = 'lift_tongue_to_nose'
+                    else:
                         # if self.type_result == 'down_tongue_to_chin':
-                        self.output = eng.tracking_tongue(5)
+                        output = eng.tracking_tongue(5)
+                        if output[4] > 0:
+                            self.output_tongue = 'down_tongue_to_chin'
+
         # Print the output (optional)
-        print(self.output)
+        print(output)
 
         # Quit the MATLAB engine
         eng.quit()
