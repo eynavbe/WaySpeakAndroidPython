@@ -154,7 +154,7 @@ class Tongue:
         eng = matlab.engine.start_matlab()
 
         # Call the MATLAB function and capture the output
-        self.output = eng.tracking_tongue(1)
+        self.output = eng.tracking_tongue(self.type_result)
 
         # Print the output (optional)
         print(output)
