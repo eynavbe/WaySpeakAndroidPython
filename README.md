@@ -138,24 +138,58 @@ The aligned image is sent to the learning machine trained to recognize an smile,
 #### Result
 Facial expression analysis was tested on 8 people, 3 men and 5 women.
 ##### 1) Mouth open
+Accuracy: 0.93 </br>
 Precision: 0.87 </br>
 Recall: 1.0 </br>
-Accuracy: 0.93 </br>
 F1-score: 0.93 </br>
 
 ##### 2) Mouth closed
+Accuracy: 0.93 </br>
+Precision: 1.0 </br>
+Recall: 0.88 </br>
+F1-score: 0.93 </br>
 
 ##### 3) Smile
+Accuracy: 0.80 </br>
 Precision: 0.74 </br>
 Recall: 0.94 </br>
-Accuracy: 0.80 </br>
 F1-score: 0.83 </br>
+
 ##### 4) Puckering of lips
+Accuracy: 0.76 </br>
+Precision: 0.18 </br>
+Recall: 0.2 </br>
+F1-score: 0.19 </br>
+
 ##### 5) Stick out the tongue in a straight line
+Accuracy: 0.82 </br>
+Precision: 0.62 </br>
+Recall: 0.71 </br>
+F1-score: 0.66 </br>
+
 ##### 6) Move the tongue to the right
+Accuracy: 0.72 </br>
+Precision: 0.66 </br>
+Recall: 0.4 </br>
+F1-score: 0.49 </br>
+
 ##### 7) Move the tongue to the left
+Accuracy: 0.75 </br>
+Precision: 0.66 </br>
+Recall: 0.25 </br>
+F1-score: 0.36 </br>
+
 ##### 8) Lift the tongue towards the nose
+Accuracy: 0.47 </br>
+Precision: 0.16 </br>
+Recall: 1.0 </br>
+F1-score: 0.28 </br>
+
 ##### 9) Lower the tongue towards the chin
+Accuracy: 0.57 </br>
+Precision: 0.3 </br>
+Recall: 0.75 </br>
+F1-score: 0.42 </br>
 
 ### Database
 - Android studio is linked to firebase.
