@@ -96,10 +96,56 @@ function output = tracking_tongue(arg1)
     %x1 = 180;
     %y1 = 318;
     %210, 318)
-    
+    k = 1;
     %width1 = 50;
     % Loop through video frames
     while hasFrame(videoReader)
+        for j = 1:32 %num of points
+            data{k}{j} = data_str{(k-1)*32 + j};
+            fprintf("data{i}{j}: %s \n", data{k}{j})
+                    values = str2double(strsplit(data_str{(k-1)*32 + j}, ', ')); % Convert to numeric values
+     % Check if the first value is 5
+            if values(1) == 48
+                x1 = values(2)-15; % Extract the second value
+               % y11 = values(3); % Extract the third value
+            end
+             if values(1) == 49
+                 x4 = values(2); % Extract the second value
+             end
+            if values(1) == 50
+                y1 = values(3); % Extract the third value
+                y3 = values(3);
+                x3 = values(2)-10;
+                 
+                y4 = values(3); % Extract the third value
+                width1 =  values(2) - (x1+15)+20;
+                
+                height1 = values(3); % Extract the third value
+            end
+            if values(1) == 54
+               % x22 = values(2)-40; % Extract the second value
+               % y22 = values(3); % Extract the third value
+            end
+             if values(1) == 52
+                x2 = values(2); 
+                y2 = values(3); 
+                width3 = x2 - x3+10;
+             end
+           %  if values(1) == 61
+             %   x4 = values(2); % Extract the second value
+             %   y4 = values(3); % Extract the third value
+           % end
+            
+            if values(1) == 58
+                height1 = (values(3) - height1)* 2; % Extract the third value
+                y4 = y4 - height1/2 +20;
+            end
+    
+            if values(1) == 67
+                x5 = values(2)-10; 
+                y5 = values(3)+15; 
+            end
+        end
         frame = readFrame(videoReader);
         
         % Convert the frame to grayscale for simplicity
