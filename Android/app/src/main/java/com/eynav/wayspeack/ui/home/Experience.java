@@ -5,16 +5,26 @@ public class Experience {
     String date;
     Boolean progress;
     Boolean success;
+    String video;
 
-    public Experience(String image, String date,  Boolean success,Boolean progress) {
+    public Experience(String image, String date,  Boolean success,Boolean progress,String video) {
         this.image = image;
         this.date = date;
         this.success = success;
         this.progress = progress;
+        this.video = video;
     }
 
     public String getImage() {
         return image;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 
     public void setImage(String image) {
@@ -52,6 +62,7 @@ public class Experience {
                 ", date='" + date + '\'' +
                 ", progress=" + progress +
                 ", success=" + success +
+                ", video='" + video + '\'' +
                 '}';
     }
 }

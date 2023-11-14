@@ -1,6 +1,7 @@
 package com.eynav.wayspeack.ui.notifications;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.bumptech.glide.Glide;
 import com.eynav.wayspeack.ClinicianListPatientsAdapter;
 import com.eynav.wayspeack.HomePatient;
 import com.eynav.wayspeack.Patient;
@@ -45,7 +47,7 @@ public class NotificationsFragment extends Fragment {
     TextView tvPatientIdentificationNumber, tvPatientIdentificationNumber2, tvDateBirth, tvGender, tvHourMeeting,
             tvDateMeeting, tvPrescribingClinician;
     TypeResults[] typeResultsArray = new TypeResults[9];
-
+    Context context;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -57,6 +59,7 @@ public class NotificationsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View root, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(root, savedInstanceState);
+        context = getContext();
         tvPatientIdentificationNumber = root.findViewById(R.id.tvPatientIdentificationNumber);
         tvPatientIdentificationNumber2 = root.findViewById(R.id.tvPatientIdentificationNumber2);
         tvDateBirth = root.findViewById(R.id.tvDateBirth);
@@ -90,11 +93,16 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest1.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
             textView.setText("00/00/00 00:00");
+            if (typeResultsArray.length > 0){
+                textView.setText(typeResultsArray[0].getDate());
+            }
+
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
-//TODO textView.setText(typeResultsArray[0].getDate());
             parentLayout.addView(imageView);
             parentLayout.addView(textView);
             builder.setView(parentLayout);
@@ -106,9 +114,14 @@ public class NotificationsFragment extends Fragment {
             LinearLayout parentLayout = new LinearLayout(getContext());
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
+
             imageView.setImageDrawable(ibBest2.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[1].getDate());
+            if (typeResultsArray.length > 1){
+                textView.setText(typeResultsArray[1].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -121,9 +134,14 @@ public class NotificationsFragment extends Fragment {
             LinearLayout parentLayout = new LinearLayout(getContext());
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
+
             imageView.setImageDrawable(ibBest3.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[2].getDate());
+            if (typeResultsArray.length > 2){
+                textView.setText(typeResultsArray[2].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -137,8 +155,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest4.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[3].getDate());
+            if (typeResultsArray.length > 3){
+                textView.setText(typeResultsArray[3].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -152,8 +174,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest5.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[4].getDate());
+            if (typeResultsArray.length > 4){
+                textView.setText(typeResultsArray[4].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -167,8 +193,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest6.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[5].getDate());
+            if (typeResultsArray.length > 5){
+                textView.setText(typeResultsArray[5].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -182,8 +212,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest7.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[6].getDate());
+            if (typeResultsArray.length > 6){
+                textView.setText(typeResultsArray[6].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -197,8 +231,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest8.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[7].getDate());
+            if (typeResultsArray.length > 7){
+                textView.setText(typeResultsArray[7].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -212,8 +250,12 @@ public class NotificationsFragment extends Fragment {
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             ImageView imageView = new ImageView(getContext());
             imageView.setImageDrawable(ibBest9.getDrawable());
+            ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(500, 500);
+            imageView.setLayoutParams(layoutParams);
             TextView textView = new TextView(getContext());
-            textView.setText(typeResultsArray[8].getDate());
+            if (typeResultsArray.length > 8){
+                textView.setText(typeResultsArray[8].getDate());
+            }
             textView.setTextSize(14);
             textView.setTextColor(Color.BLACK);
             parentLayout.addView(imageView);
@@ -285,31 +327,50 @@ public class NotificationsFragment extends Fragment {
                                     if (!image.equals("")){
                                         switch (typeKey.get(id)){
                                             case 0:
+                                                Glide.with(context).load(image).into(ibBest1);
+
 //                                                ibBest1.setImageBitmap();
                                                 break;
                                             case 1:
 //                                                ibBest2.setImageBitmap();
+                                                Glide.with(context).load(image).into(ibBest2);
+
                                                 break;
                                             case 2:
+                                                Glide.with(context).load(image).into(ibBest3);
+
 //                                                ibBest3.setImageBitmap();
                                                 break;
                                             case 3:
+                                                Glide.with(context).load(image).into(ibBest4);
+
 //                                                ibBest4.setImageBitmap();
                                                 break;
                                             case 4:
+                                                Glide.with(context).load(image).into(ibBest5);
+
 //                                                ibBest5.setImageBitmap();
                                                 break;
                                             case 5:
+                                                Glide.with(context).load(image).into(ibBest6);
+
 //                                                ibBest6.setImageBitmap();
                                                 break;
                                             case 6:
+                                                Glide.with(context).load(image).into(ibBest7);
+
 //                                                ibBest7.setImageBitmap();
                                                 break;
                                             case 7:
+                                                Glide.with(context).load(image).into(ibBest8);
+
 //                                                ibBest8.setImageBitmap();
                                                 break;
                                             case 8:
+                                                Glide.with(context).load(image).into(ibBest9);
+
 //                                                ibBest9.setImageBitmap();
+
                                                 break;
 
                                             //     TODO set image of typeResultsList

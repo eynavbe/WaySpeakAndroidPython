@@ -308,8 +308,9 @@ public class PerformingExercise extends Fragment {
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            updateCountDo();
 
+
+                            waitAnalysis(patient.getClinicName(),patient.getIdentificationNumber(),dateStartF,typeExercise.getType()+typeExercise.getCount(),formattedDate);
                         }
 
 
@@ -322,6 +323,41 @@ public class PerformingExercise extends Fragment {
                     });
 
 
+
+
+    }
+
+    private void waitAnalysis(String clinicName, String identificationNumber, String dateStartF, String typeCount, String formattedDate) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        Map<String, Object> Exercise = new HashMap<>();
+
+        Exercise.put("clinicName", clinicName);
+        Exercise.put("identificationNumber", identificationNumber);
+        Exercise.put("dateStartF", dateStartF);
+        Exercise.put("typeCount", typeCount);
+        Exercise.put("formattedDate", formattedDate);
+
+
+
+        db.collection("waitAnalysis").document(identificationNumber+formattedDate)
+                .set(Exercise)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        updateCountDo();
+
+
+                    }
+
+
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        System.out.println("Error adding document");
+                    }
+                });
 
 
     }

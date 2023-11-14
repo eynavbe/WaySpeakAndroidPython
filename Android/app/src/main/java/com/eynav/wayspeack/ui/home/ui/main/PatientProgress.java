@@ -7,13 +7,18 @@ import androidx.fragment.app.Fragment;
 
 import android.app.AlertDialog;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
 import com.eynav.wayspeack.Patient;
@@ -106,6 +111,8 @@ public class PatientProgress extends Fragment {
             System.out.println(typeExerciseList);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            ScrollView scrollView = new ScrollView(getContext());
+
             LinearLayout parentLayout = new LinearLayout(getContext());
             parentLayout.setOrientation(LinearLayout.VERTICAL);
             int k = 0;
@@ -157,9 +164,31 @@ public class PatientProgress extends Fragment {
                 textViewProgress.setTextSize(14);
                 textViewProgress.setTextColor(Color.BLACK);
                 parentLayout.addView(textViewProgress);
-            }
 
-            builder.setView(parentLayout);
+                VideoView videoView1 = new VideoView(getContext());
+                MediaController mediaController = new MediaController(getContext());
+                mediaController.setAnchorView(videoView1);
+
+                videoView1.setMediaController(mediaController);
+                Uri videoUri = Uri.parse(typeExerciseList[k].getExperienceList().get(i).getVideo());
+
+                videoView1.setVideoURI(videoUri);
+                videoView1.setLayoutParams(new FrameLayout.LayoutParams(400,400));
+//                videoView1.
+////        vvExerciseInstruction.start();
+                videoView1.setOnPreparedListener(mp -> {
+                    mp.setVolume(0, 0);
+                    mp.setLooping(true);
+                    videoView1.start();
+                });
+
+                parentLayout.addView(videoView1);
+
+
+
+            }
+            scrollView.addView(parentLayout);
+            builder.setView(scrollView);
             builder.show();
 
         });
@@ -876,8 +905,9 @@ public class PatientProgress extends Fragment {
                                         String image = String.valueOf(document.getData().get("Image"));
                                         Boolean success = (Boolean) (document.getData().get("success"));
                                         Boolean progress = (Boolean) (document.getData().get("progress"));
+                                        String video = String.valueOf(document.getData().get("video"));
 
-                                        Experience experience = new Experience(image, date, success, progress);
+                                        Experience experience = new Experience(image, date, success, progress,video);
                                         experienceList.add(experience);
                                         if ((success) && (Integer.parseInt(typeExerciseList[i].getCount()) > count1)) {
                                             count1 += 1;
