@@ -305,12 +305,13 @@ public class HomePatient extends AppCompatActivity {
                                     String image = String.valueOf(document.getData().get("Image"));
                                     Boolean success = (Boolean) (document.getData().get("success"));
                                     Boolean progress = (Boolean) (document.getData().get("progress"));
+                                    String video = String.valueOf(document.getData().get("video"));
 
                                     if ((success) && (countDo1 < Integer.parseInt(typeExerciseList.get(i).getCount()))){
                                         countDo1+=1;
                                     }
 
-                                    Experience experience = new Experience(image, date, success, progress);
+                                    Experience experience = new Experience(image, date, success, progress,video);
                                     experienceList.add(experience);
 
                                 }
