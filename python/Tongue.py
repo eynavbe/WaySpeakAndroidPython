@@ -154,6 +154,7 @@ class Tongue:
         eng = matlab.engine.start_matlab()
 
         # Call the MATLAB function and capture the output
+
         if self.type_result == 'Move_tongue_to_left':
             output = eng.tracking_tongue(1)
             if output[0][0] > output[0][1]:
@@ -181,7 +182,6 @@ class Tongue:
 
         # Print the output (optional)
         print(output)
-
         # Quit the MATLAB engine
         eng.quit()
 

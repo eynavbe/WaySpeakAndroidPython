@@ -30,7 +30,7 @@ class AnalysisVideo:
             with open(local_file_path, 'wb') as f:
                 f.write(response.read())
 
-     def analysis_tongue(self):
+    def analysis_tongue(self):
 
         self.tongue = Tongue('video_analysis.mp4', self.type_result)
 
@@ -53,6 +53,7 @@ class AnalysisVideo:
         if self.type_result == 'down_tongue_to_chin':
             if 'chin' in self.tongue.output_tongue:
                 self.progress_bool_comparison = True
+
 
     def analysis_every_frame_no_tongue(self):
         shape_best, frame_best, faceAligned_best = None, None, None

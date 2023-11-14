@@ -7,7 +7,11 @@ from Tongue import Tongue
 
 if __name__ == "__main__":
     # AnalysisRealTime('eynav.png', 'eynav.png', "mouth_open")
-    ConnectFirebase("39320201009","mouth_open", "04062023", "mouth_open5","1959_310723 ")
+    ConnectFirebase("39320201009","mouth_open", "04062023", "mouth_open5","1959_310723 ", "clinic1")
+
+
+    # Example 1: Using join() and isdigit() methods
+    # Remove numbers from string
 
     # MachineTraining()
     # unittest.main(module=Tests)

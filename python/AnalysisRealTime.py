@@ -19,7 +19,7 @@ class AnalysisRealTime:
         cv2.destroyAllWindows()
         self.vs.stop()
 
-     def analysis_tongue(self):
+    def analysis_tongue(self):
 
         self.tongue = Tongue('video_analysis.mp4', self.type_result)
 
